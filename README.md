@@ -42,29 +42,29 @@ ALGORITHM SumEvens(arr):
    * The recurrence relation models the number of basic operations for a given input size n.
    * In recursive algorithms, the number of basic operations depends heavily on the number of times the algorithm must repeat over the input before reaching the base case which specifies the bottom of the algorithm's stack and is not dependent on other recursive calls.
    * The following is the recurrence relation of the example algorithm where F(n) is the number of basic operations and n is the input size:
-   * $$F(n) = F(n-1) + 1$$
+   * F(n) = F(n-1) + 1
      * F(n-1) represents each algorithm call over the input.
      * 1 represents the basic operation that occurs during each run.
-   * $$F(1) = 1$$
+   * F(1) = 1
      * This is our base condition represented by the algortihms base case. When the input size is one, the algorithm will execute the basic operation one time.
      * When this base case is reached, no more calls to the algorithm will occur.
 
 5. Solve the recurrence relation
 
    * To solve the recurrence relation, substitute F(n-1) for its functional equivalent.
-     * $$F(n) = F(n - 1) + 1$$
-     * Since $$F(n - 1) = F(n - 2) + 1$$, $$F(n) = (F(n - 2) + 1) + 1$$
+     * F(n) = F(n - 1) + 1
+     * Since F(n - 1) = F(n - 2) + 1, F(n) = (F(n - 2) + 1) + 1
    * Repeat these substitutions to establish a general pattern with variables instead of number in the function parameter.
-     * $$F(n) = ((F(n - 3) + 1) + 1) + 1$$
-     * $$F(n) = F(n - 3) + 3$$
-  * $$F(n) = F(n - i) + i$$
+     * F(n) = ((F(n - 3) + 1) + 1) + 1
+     * F(n) = F(n - 3) + 3
+  * F(n) = F(n - i) + i
    * Determine a value for the variable that achieves the recurrence relation's base case.
-     * Let $$i = n - 1$$
-     * $$F(n) = F(n - (n - 1)) + (n - 1)$$
-     * $$F(n) = F(1) + n - 1$$
+     * Let i = n - 1
+     * F(n) = F(n - (n - 1)) + (n - 1)
+     * F(n) = F(1) + n - 1
    * Substitute the result of the base case into your relation and solve for F(n).
-     * $$F(n) = 1 + n - 1 = n$$
-     * $$F(n) = n$$
+     * F(n) = 1 + n - 1 = n
+     * F(n) = n
    * Convert the result of the solved recurrence relation to its asymptotic time complexity by stripping all lower-order terms, scalar multiples, and constants.
-     * $$F(n) = n$$
-     * The asymptotic time complexity of the recursive algorithm is $$O(n)$$.
+     * F(n) = n
+     * The asymptotic time complexity of the recursive algorithm is O(n).
